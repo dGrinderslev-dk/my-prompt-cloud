@@ -3,7 +3,11 @@
 	<nav id="headerNavbar" class="navbar navbar-expand-md">
 		<div class="containerLg container-lg d-flex flex-wrap">
 			<% /* logoFileType: 'svg' eller 'img'. Bemærk at det måske er nødvendigt at ændre noget i css fil ved skift af logoFileType */ %>
-			<%- include('../../../shared/includes/nav-logo-img', {logoFileType: 'svg', containerTag: 'a', containerClass: 'navLogoImg-full d-flex navbar-brand link-primary me-0'}) %>
+			<% if (0) { %>
+				<%- include('../../../shared/includes/nav-logo-img', {logoFileType: 'svg', containerTag: 'a', containerClass: 'navLogoImg-full d-flex navbar-brand link-primary me-0'}) %>
+			<% } else { %>
+				<%- include('../../../shared/includes/nav-logo-img', {filenameOrId: 'ny-logo', viewBoxValue: '0 0 113.75906 41.566093', logoFileType: 'svg', containerTag: 'a', containerClass: 'navLogoImg-full d-flex navbar-brand link-primary me-0'}) %>
+			<% } %>
 			<% /* const navLinkAddClasses = ' link-body-emphasis'; */ %>
 			<% const navLinkAddClasses = ''; %>
 			<% if (locals.isAuth) { %>

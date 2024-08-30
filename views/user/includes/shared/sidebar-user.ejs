@@ -7,7 +7,11 @@ const dropdownAlignment = 0 ? 'dropdown-menu-start' : 'dropdown-menu-end';
 
 	<div class="SIDEBAR-header">
 		<div class="SIDEBAR-brandAndCloseBtn_container py-2 d-flex align-items-center <%= 0 ? '' : 'border-bottom ' %><%= locals.borderClasses_headerUser_contentHeader_sidebar %>">
-			<%- include('../../../shared/includes/nav-logo-img', {logoFileType: 'svg', containerTag: 'div', containerId: 'sidebarBrandSvgContainer', containerClass: `${locals.alwaysShowLogoInSidebar ? 'd-flex ' : 'd-flex d-md-none '}justify-content-center flex-fill navLogoImg-full link-primary`}) %>
+			<% if (0) { %>
+				<%- include('../../../shared/includes/nav-logo-img', {logoFileType: 'svg', containerTag: 'div', containerId: 'sidebarBrandSvgContainer', containerClass: `${locals.alwaysShowLogoInSidebar ? 'd-flex ' : 'd-flex d-md-none '}justify-content-center flex-fill navLogoImg-full link-primary`}) %>
+			<% } else { %>
+				<%- include('../../../shared/includes/nav-logo-img', {filenameOrId: 'ny-logo', viewBoxValue: '0 0 113.75906 41.566093', logoFileType: 'svg', containerTag: 'div', containerId: 'sidebarBrandSvgContainer', containerClass: `${locals.alwaysShowLogoInSidebar ? 'd-flex ' : 'd-flex d-md-none '}justify-content-center flex-fill navLogoImg-full link-primary`}) %>
+			<% } %>
 			<div class="<%= locals.alwaysShowLogoInSidebar ? 'd-none' : 'd-none d-md-flex'; %> justify-content-center flex-fill">
 				<h4 class="fw-bold mb-0">Prompts</h2>
 			</div>
