@@ -91,8 +91,8 @@ app.use(errorHandlerMiddleware);
 db.connectToDatabase()
 	.then(function () {
 		// hvis forbinde til database lykkedes:
-		// lyt efter indkommende requests på port 3000
-		const port = 3000;
+		// lyt efter indkommende requests på port xxxx
+		const port = process.env['PORT'];
 		app.listen(port, () => {
 			console.log(`App lytter efter indkommende requests på port ${port}: http://localhost:${port}/forside`);
 		});
